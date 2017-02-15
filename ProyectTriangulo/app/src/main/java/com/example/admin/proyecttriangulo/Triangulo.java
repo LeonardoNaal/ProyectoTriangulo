@@ -8,24 +8,6 @@ public class Triangulo {
     public float LadoA;
     public float LadoB;
     public float LadoC;
-    public float Area;
-    public boolean Comprobar;
-
-    public float getArea() {
-        return Area;
-    }
-
-    public void setArea(float area) {
-        Area = area;
-    }
-
-    public boolean isComprobar() {
-        return Comprobar;
-    }
-
-    public void setComprobar(boolean comprobar) {
-        Comprobar = comprobar;
-    }
 
     public float getLadoA() {
         return LadoA;
