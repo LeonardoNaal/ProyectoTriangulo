@@ -6,16 +6,19 @@ package com.example.admin.proyecttriangulo;
 
 public class ValidarTriangulo {
 
+    boolean isTriangulo;
     //Este metodo valida si el triangulo es correcto y devuelve un boleano
     public Boolean Validar(Triangulo obj)
     {
         if((obj.getLadoA() + obj.getLadoB()) > obj.getLadoC() && (obj.getLadoA() + obj.getLadoC()) > obj.getLadoB() && (obj.getLadoB() + obj.getLadoC()) > obj.getLadoA())
         {
-            return true;
+            isTriangulo=true;
+            return isTriangulo;
         }
         else
         {
-            return false;
+            isTriangulo=false;
+            return isTriangulo;
         }
     }
 
