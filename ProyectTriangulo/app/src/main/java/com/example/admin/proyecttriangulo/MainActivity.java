@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText ladoA,ladoB,ladoC,areaTriangulo,validacion;
@@ -59,8 +60,14 @@ public class MainActivity extends AppCompatActivity {
                 objTriangulo.LadoB= Float.parseFloat(ladoB.getText().toString());
                 objTriangulo.LadoC= Float.parseFloat(ladoC.getText().toString());
                 CalcularAreaTriangulo objCalculoArea=new CalcularAreaTriangulo();
-                ResArea= objCalculoArea.CalcularArea(objTriangulo);
-                areaTriangulo.setText(Float.toString(ResArea));
+                try
+                {
+                    ResArea= objCalculoArea.CalcularArea(objTriangulo);
+                    areaTriangulo.setText(Float.toString(ResArea));
+                }catch (Exception e)
+                {
+                    Toast.makeText(null,"Datos vacios", Toast.LENGTH_SHORT).show();
+                }
                 //En esta parte se hace llamado al método para calcular el area de un triángulo
                 //El resultado se muestra en un TextView llamado txtResultado
             }
