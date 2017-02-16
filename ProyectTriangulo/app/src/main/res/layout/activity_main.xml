@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,8 +11,74 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.admin.proyecttriangulo.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Ingresar Lado A"
+            android:ems="10"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="61dp"
+            android:id="@+id/txtLadoA" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Ingresar Lado B"
+            android:ems="10"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="61dp"
+            android:id="@+id/txtLadoB" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Ingresar Lado C"
+            android:ems="10"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="61dp"
+            android:id="@+id/txtLadoC" />
+
+        <Button
+            android:text="Verificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnVerificar"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/textoBoton"/>
+
+        <Button
+            android:text="Calcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalcular"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/textoBoton"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtVerificar" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtResultado" />
+    </LinearLayout>
+
 </RelativeLayout>
