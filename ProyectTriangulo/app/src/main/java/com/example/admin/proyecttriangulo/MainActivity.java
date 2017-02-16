@@ -36,9 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 objTriangulo.LadoA= Float.parseFloat(ladoA.getText().toString());
                 objTriangulo.LadoB= Float.parseFloat(ladoB.getText().toString());
                 objTriangulo.LadoC= Float.parseFloat(ladoC.getText().toString());
-                CalcularAreaTriangulo objCalculoArea=new CalcularAreaTriangulo();
-                ResArea= objCalculoArea.CalcularArea(objTriangulo);
-                areaTriangulo.setText(Float.toString(ResArea));
+                ValidarTriangulo objValidar=new ValidarTriangulo();
+                ResValidacion= objValidar.Validar(objTriangulo);
+                if (ResValidacion==true){
+                    validacion.setText("Es un triángulo");
+                }
+                else {
+                    validacion.setText("No es un triángulo");
+                }
+
                 //En esta parte se hace llamado al método para verificar si es un triángulo
                 //La respuesta se muestra en un TextView llamado txtVerificar
             }
@@ -52,14 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 objTriangulo.LadoA= Float.parseFloat(ladoA.getText().toString());
                 objTriangulo.LadoB= Float.parseFloat(ladoB.getText().toString());
                 objTriangulo.LadoC= Float.parseFloat(ladoC.getText().toString());
-                ValidarTriangulo objValidar=new ValidarTriangulo();
-                ResValidacion= objValidar.Validar(objTriangulo);
-                if (ResValidacion==true){
-                    validacion.setText("Es un triángulo");
-                }
-                else {
-                    validacion.setText("No es un triángulo");
-                }
+                CalcularAreaTriangulo objCalculoArea=new CalcularAreaTriangulo();
+                ResArea= objCalculoArea.CalcularArea(objTriangulo);
+                areaTriangulo.setText(Float.toString(ResArea));
                 //En esta parte se hace llamado al método para calcular el area de un triángulo
                 //El resultado se muestra en un TextView llamado txtResultado
             }
