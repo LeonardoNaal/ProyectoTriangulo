@@ -63,16 +63,12 @@ public class MainActivity extends AppCompatActivity {
 
                 try
                 {
-<<<<<<< HEAD
                     Triangulo objTriangulo=new Triangulo();
                     objTriangulo.LadoA= Float.parseFloat(ladoA.getText().toString());
                     objTriangulo.LadoB= Float.parseFloat(ladoB.getText().toString());
                     objTriangulo.LadoC= Float.parseFloat(ladoC.getText().toString());
                     CalcularAreaTriangulo objCalculoArea=new CalcularAreaTriangulo();
-                    ResArea= objCalculoArea.CalcularArea(objTriangulo);
-=======
                     ResArea= objCalculoArea.calcularArea(objTriangulo);
->>>>>>> origin/master
                     areaTriangulo.setText(Float.toString(ResArea));
                 }catch (Exception e)
                 {
