@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 CalcularAreaTriangulo objCalculoArea=new CalcularAreaTriangulo();
                 try
                 {
-                    ResArea= objCalculoArea.CalcularArea(objTriangulo);
+                    ResArea= objCalculoArea.calcularArea(objTriangulo);
                     areaTriangulo.setText(Float.toString(ResArea));
                 }catch (Exception e)
                 {
