@@ -33,17 +33,22 @@ public class MainActivity extends AppCompatActivity {
         btnVerificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Triangulo objTriangulo=new Triangulo();
-                objTriangulo.LadoA= Float.parseFloat(ladoA.getText().toString());
-                objTriangulo.LadoB= Float.parseFloat(ladoB.getText().toString());
-                objTriangulo.LadoC= Float.parseFloat(ladoC.getText().toString());
-                ValidarTriangulo objValidar=new ValidarTriangulo();
-                ResValidacion= objValidar.Validar(objTriangulo);
-                if (ResValidacion==true){
-                    validacion.setText("Es un triángulo");
+                try{
+                    Triangulo objTriangulo=new Triangulo();
+                    objTriangulo.LadoA= Float.parseFloat(ladoA.getText().toString());
+                    objTriangulo.LadoB= Float.parseFloat(ladoB.getText().toString());
+                    objTriangulo.LadoC= Float.parseFloat(ladoC.getText().toString());
+                    ValidarTriangulo objValidar=new ValidarTriangulo();
+                    ResValidacion= objValidar.Validar(objTriangulo);
+                    if (ResValidacion==true){
+                        validacion.setText("Es un triángulo");
+                    }
+                    else {
+                        validacion.setText("No es un triángulo");
+                    }
                 }
-                else {
-                    validacion.setText("No es un triángulo");
+                catch(Exception e){
+                    Toast.makeText(null,"Favor de verificar los datos introducidos", Toast.LENGTH_SHORT).show();
                 }
 
                 //En esta parte se hace llamado al método para verificar si es un triángulo
@@ -55,18 +60,19 @@ public class MainActivity extends AppCompatActivity {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Triangulo objTriangulo=new Triangulo();
-                objTriangulo.LadoA= Float.parseFloat(ladoA.getText().toString());
-                objTriangulo.LadoB= Float.parseFloat(ladoB.getText().toString());
-                objTriangulo.LadoC= Float.parseFloat(ladoC.getText().toString());
-                CalcularAreaTriangulo objCalculoArea=new CalcularAreaTriangulo();
+
                 try
                 {
+                    Triangulo objTriangulo=new Triangulo();
+                    objTriangulo.LadoA= Float.parseFloat(ladoA.getText().toString());
+                    objTriangulo.LadoB= Float.parseFloat(ladoB.getText().toString());
+                    objTriangulo.LadoC= Float.parseFloat(ladoC.getText().toString());
+                    CalcularAreaTriangulo objCalculoArea=new CalcularAreaTriangulo();
                     ResArea= objCalculoArea.CalcularArea(objTriangulo);
                     areaTriangulo.setText(Float.toString(ResArea));
                 }catch (Exception e)
                 {
-                    Toast.makeText(null,"Datos vacios", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(null,"Favor de verificar los datos introducidos", Toast.LENGTH_SHORT).show();
                 }
                 //En esta parte se hace llamado al método para calcular el area de un triángulo
                 //El resultado se muestra en un TextView llamado txtResultado
