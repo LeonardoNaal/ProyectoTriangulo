@@ -15,38 +15,39 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Ingresar Lado A"
             android:ems="10"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="61dp"
-            android:id="@+id/txtLadoA" />
+            android:layout_marginBottom="50dp"
+            android:id="@+id/txtLadoA"
+            android:hint="Ingresar Lado A" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Ingresar Lado B"
             android:ems="10"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="61dp"
-            android:id="@+id/txtLadoB" />
+            android:layout_marginBottom="50dp"
+            android:id="@+id/txtLadoB"
+            android:hint="Ingresar Lado B" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Ingresar Lado C"
             android:ems="10"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="61dp"
-            android:id="@+id/txtLadoC" />
+            android:layout_marginBottom="50dp"
+            android:id="@+id/txtLadoC"
+            android:hint="Ingresar Lado C" />
 
         <Button
             android:text="Verificar"
@@ -71,14 +72,18 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/txtVerificar" />
+            android:id="@+id/txtVerificar"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/txtResultado" />
+            android:id="@+id/txtResultado"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
     </LinearLayout>
 
 </RelativeLayout>
